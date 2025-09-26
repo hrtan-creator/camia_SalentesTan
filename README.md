@@ -10,3 +10,40 @@ This will be python program that will be accessed by students and teachers, made
 - Filtering option for certain organizations
 - Allow comments on announcements
 - (For announcers) Allow them to make categories (Links, QRs, all, etc.)
+
+## How to run program:
+1. Go into an internet browser
+2. Enter the website link
+3. Follow the on screen instructions 
+
+##Example output:
+
+Sign in using email and password: email: aubentes@gmail.com
+Password: 1234
+Enter name: Uma Bentes
+Enter username: Pricc
+Enter password: 12345678
+
+Grade and Section:
+*Drop down menu*
+7 Ruby
+7 Diamond
+7 Emerald
+8 Camia <--
+8Jasmine
+8 Sampaguita
+...(Etc.)
+
+*Drop down menu*
+Rondalla <--
+Pisay Kanta
+Sikatala
+Debate
+Robotics 
+...(Etc.)
+
+*Announcement page with filter option*
+
+## Contributors
+- Student 1 : Hannah Rouella T. Tan ( Brainstorming, Troubleshooting, Creating Flowchart )
+- Student 2 : Audrey Uhma  G. Salentes ( Project idea, Pseudocode used for flowchart, Features, Example output, Project description and how to run a program ) 
