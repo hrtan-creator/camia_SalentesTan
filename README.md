@@ -53,4 +53,4 @@ Here is the link to the flowchart of the CS project https://drive.google.com/fil
 
 
 ## Project Draft
-Here is the Project Draft to complete the project https://cs-project-draft.tiiny.site
+Here is the Project Draft to complete the project:
