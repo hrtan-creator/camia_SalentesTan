@@ -51,6 +51,3 @@ Robotics
 ## Logic Plan
 Here is the link to the flowchart of the CS project https://drive.google.com/file/d/1xB_13iHLWDxj8yiz-D9av98ppDFJKioi/view?usp=drivesdk if it is a unsupported file, I will send the link to you directly in Messenger, Ma'am Datch.
 
-
-## Project Draft
-Here is the Project Draft to complete the project:
