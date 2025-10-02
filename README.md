@@ -46,4 +46,8 @@ Robotics
 
 ## Contributors
 - Student 1 : Hannah Rouella T. Tan ( Brainstorming, Troubleshooting, Creating Flowchart )
-- Student 2 : Audrey Uhma  G. Salentes ( Project idea, Pseudocode used for flowchart, Features, Example output, Project description and how to run a program ) 
+- Student 2 : Audrey Uhma  G. Salentes ( Project idea, Pseudocode used for flowchart, Features, Example output, Project description and how to run a program )
+
+
+
+Here is the Project Draft to complete the project https://cs-project-draft.tiiny.site
