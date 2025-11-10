@@ -49,5 +49,7 @@ Robotics
 - Student 2 : Audrey Uhma  G. Salentes ( Project idea, Pseudocode used for flowchart, Features, Example output, Project description and how to run a program )
 
 ## Logic Plan
-Here is the link to the flowchart of the CS project https://drive.google.com/file/d/1xB_13iHLWDxj8yiz-D9av98ppDFJKioi/view?usp=drivesdk if it is a unsupported file, I will send the link to you directly in Messenger, Ma'am Datch.
+Here is the link to the updated flowchart of the CS project
+https://drive.google.com/file/d/1ORtI-VmYRqVymqs_EiqB5rADZJzwj-NV/view?usp=drivesdk&usp
+if it is a unsupported file, I will try to send the link to you directly in Messenger.
 
