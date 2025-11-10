@@ -1,0 +1,29 @@
+11/10/25
+
+**CS2 PROJECT DRAFT**
+
+*TITLE:*
+
+•PSHS Public Announcement System• 
+
+*PROBLEM STATEMENT:*
+
+The current announcement system at PSHS-EVC at times causes inconvenience and 
+confusion. Students have to stay in the gym for long periods of time, and the Student 
+Alliance (SA) sometimes struggles to track which announcements are actually 
+happening. While the EVC Direct Facebook page exists, it doesn’t serve too well in
+organized official announcements. To solve this, the proponents, propose creating a 
+clean and reliable website that collects confirmed announcements from all Academic 
+Learning Programs (ALP), organizations, and student bodies. This system aims to 
+make announcements clearer, faster to access, and easier to manage.
+
+The website will be made using Python, a programming language used to create 
+software and websites, and Streamlit, a tool for making simple web browser apps 
+using Python, installed through pip, which is a program that helps add tools such as 
+Streamlit itself. It may use a database like MySQL which can be used to store 
+announcement details like title, content, date, and author, though that is subject to 
+change. Announcements will automatically be removed after their set date. Posting 
+access will depend on user roles—administrators can manage all posts, club or 
+organization officers can post in their groups, and students can only view. The goal of 
+this project is to make a centralized, secure, and easy-to-use announcement system 
+that saves time and prevents confusion.
