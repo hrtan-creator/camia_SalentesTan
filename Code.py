@@ -13,8 +13,25 @@ if "comments" not in st.session_state:
 if "user" not in st.session_state:
     st.session_state["user"] = None
 
-ALAs = [f"ALA {i}" for i in range(1, 11)]
-sections = [f"{i}-Section" for i in range(7, 13)]
+ALAs = [
+    "chemyun", "Suga", "Pisay math circle", "Sikatala", "Pisayaw", 
+    "Debate", "Musikanta", "Rondalla", "Hobbyists", "Echo"
+]
+
+sections = [
+    "7-EMERALD", "7-RUBY", "7-DIAMOND",
+    "8-CAMIA", "8-SAMPAGUITA", "8-JASMINE",
+    "9-SODIUM", "9-RUBIDIUM", "9-POTASSIUM",
+    "10-PROTON", "10-NEUTRON", "10-ELECTRON",
+    "11-A", "11-B", "11-C",
+    "12-A", "12-B", "12-C"
+]
+
+batch_officers = [
+    "Student", "President", "Vice President", "Secretary", 
+    "Treasurer", "Auditor", "Peace Officers"
+]
+# -----------------------------
 
 st.title("PSHS Announcement System")
 
@@ -33,7 +50,7 @@ if menu == "Sign Up":
 
     if role == "student":
         grade_section = st.selectbox("Grade & Section", sections)
-        student_type = st.selectbox("Type", ["student", "batch officer-1", "batch officer-2"])
+        student_type = st.selectbox("Type", batch_officers)
     else:
         advisor_sections = st.multiselect("Advisory Sections", sections)
         advises_ala = st.selectbox("Do you advise an ALA?", ["No", "Yes"])
@@ -101,20 +118,20 @@ if st.session_state["user"]:
     st.subheader("User Profiles")
 
     all_users = list(st.session_state["users"].keys())
-    selected_user = st.selectbox("View Profile", all_users)
+    if all_users:
+        selected_user = st.selectbox("View Profile", all_users)
+        profile = st.session_state["users"][selected_user]
 
-    profile = st.session_state["users"][selected_user]
+        st.write("Email:", selected_user)
+        st.write("Role:", profile["role"])
+        st.write("ALA:", profile["ala"])
+        st.write("Position:", profile["position"])
 
-    st.write("Email:", selected_user)
-    st.write("Role:", profile["role"])
-    st.write("ALA:", profile["ala"])
-    st.write("Position:", profile["position"])
-
-    if profile["role"] == "student":
-        st.write("Section:", profile["grade_section"])
-    else:
-        st.write("Advisory Sections:", profile["advisory_sections"])
-        st.write("ALA Advised:", profile["ala_advised"])
+        if profile["role"] == "student":
+            st.write("Section:", profile["grade_section"])
+        else:
+            st.write("Advisory Sections:", profile["advisory_sections"])
+            st.write("ALA Advised:", profile["ala_advised"])
 
     today = datetime.date.today()
 
@@ -159,6 +176,7 @@ if st.session_state["user"]:
                     "author": email
                 })
                 st.success("Posted successfully!")
+                st.rerun()
 
     for i, ann in enumerate(st.session_state["announcements"]):
 
@@ -183,46 +201,11 @@ if st.session_state["user"]:
             if st.button("Submit", key=f"btn_{i}"):
                 if comment.strip():
                     st.session_state["comments"][i].append(comment)
+                    st.rerun()
                 else:
                     st.warning("Comment cannot be empty.")
 
             for c in st.session_state["comments"][i]:
-                st.write("-", c)
-
-            st.write("---")        expiry = st.date_input("Expiry Date")
-
-        if st.button("Post"):
-            st.session_state["announcements"].append({
-                "title": title,
-                "content": content,
-                "category": category,
-                "ala": user["ala"],
-                "date": datetime.date.today(),
-                "expiry": expiry
-            })
-            st.success("Posted")
-
-    st.subheader("Announcements")
-
-    for i, ann in enumerate(st.session_state["announcements"]):
-
-        if (filter_org == "All" or ann["ala"] == filter_org) and \
-           (filter_category == "All" or ann["category"] == filter_category):
-
-            st.write("###", ann["title"])
-            st.write(ann["content"])
-            st.write("ALA:", ann["ala"])
-            st.write("Category:", ann["category"])
-
-            if i not in st.session_state["comments"]:
-                st.session_state["comments"][i] = []
-
-            comment = st.text_input("Comment", key=str(i))
-
-            if st.button("Submit", key="btn" + str(i)):
-                st.session_state["comments"][i].append(comment)
-
-            for c in st.session_state["comments"][i]:
-                st.write("-", c)
+                st.write(f"- {c}")
 
             st.write("---")
